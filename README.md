@@ -1,3 +1,3 @@
 # <sup>genera</sup>TOR
 
-## Aplikacja internetowa do szybkiego tworzenia rozkazów pisemnych dla symulatora TD2
+## Webanwendung zur schnellen Erstellung schriftlicher Befehle für den TD2-Simulator. Original by Spythere
