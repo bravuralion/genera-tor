@@ -15,18 +15,25 @@
 
       <button class="g-button action icon" @click="switchLang">
         <LucideGlobe :size="20" />
-        <span>{{ store.currentAppLocale == 'pl' ? 'POL' : 'ENG' }}</span>
+        <span>{{ currentLocaleLabel }}</span>
       </button>
     </div>
   </nav>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { LucideGlobe, LucideMoon, LucideSun } from 'lucide-vue-next';
+import { useI18n } from 'vue-i18n';
 import { version } from '../../../package.json';
 import { useStore } from '../../store/store';
 
 const store = useStore();
+const { t } = useI18n();
+
+const languages = ['pl', 'en', 'de'] as const;
+
+const currentLocaleLabel = computed(() => t(`locale.${store.currentAppLocale}`));
 
 function switchDarkMode() {
   store.orderDarkMode = !store.orderDarkMode;
@@ -34,7 +41,11 @@ function switchDarkMode() {
 }
 
 function switchLang() {
-  store.changeLang(store.currentAppLocale == 'pl' ? 'en' : 'pl');
+  const currentIndex = languages.indexOf(store.currentAppLocale as (typeof languages)[number]);
+  const normalizedIndex = currentIndex === -1 ? 0 : currentIndex;
+  const nextLang = languages[(normalizedIndex + 1) % languages.length];
+
+  store.changeLang(nextLang);
 }
 </script>
 

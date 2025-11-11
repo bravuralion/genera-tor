@@ -104,6 +104,13 @@ interface IActionMonit {
 
 const { t } = useI18n();
 const store = useStore();
+const dateLocaleMap: Record<string, string> = {
+  pl: 'pl-PL',
+  en: 'en-GB',
+  de: 'de-DE'
+};
+
+const dateLocale = computed(() => dateLocaleMap[store.currentAppLocale] ?? dateLocaleMap.en);
 
 const actionMonit: Reactive<IActionMonit> = reactive({
   visible: false,
@@ -128,9 +135,10 @@ watch(orderMessagePreview, () => {
   if (updateDate.value == true) {
     store.orderData.header.B = new Date().toISOString().split('T')[0];
 
-    store.orderData.footer.Y = new Date().toLocaleTimeString('pl-PL', {
-      hour: 'numeric',
-      minute: '2-digit'
+    store.orderData.footer.Y = new Date().toLocaleTimeString(dateLocale.value, {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
     });
   }
 });

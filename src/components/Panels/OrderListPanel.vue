@@ -41,7 +41,7 @@
 
         <div>
           {{ t(`order-list.order-${order.createdAt ? 'added' : 'updated'}`) }}
-          {{ new Date(order.createdAt || order.updatedAt || 0).toLocaleString('pl-PL') }}
+          {{ new Date(order.createdAt || order.updatedAt || 0).toLocaleString(dateLocale) }}
         </div>
 
         <hr />
@@ -68,6 +68,13 @@ import StorageManager from '../../managers/storageManager';
 
 const { t } = useI18n();
 const store = useStore();
+const dateLocaleMap: Record<string, string> = {
+  pl: 'pl-PL',
+  en: 'en-GB',
+  de: 'de-DE'
+};
+
+const dateLocale = computed(() => dateLocaleMap[store.currentAppLocale] ?? dateLocaleMap.en);
 const storageOrderList = reactive<Reactive<IStorageOrderData[]>>([]);
 
 const ORDER_VERSION = import.meta.env['VITE_APP_ORDER_VERSION'];

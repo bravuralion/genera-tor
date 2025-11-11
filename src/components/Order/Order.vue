@@ -16,6 +16,15 @@ import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 const store = useStore();
+const dateLocaleMap: Record<string, string> = {
+  pl: 'pl-PL',
+  en: 'en-GB',
+  de: 'de-DE'
+};
+
+const dateLocale = computed(
+  () => dateLocaleMap[store.currentAppLocale] ?? dateLocaleMap.en
+);
 
 onMounted(() => {
   generateMessage();
@@ -42,7 +51,7 @@ function generateMessage() {
 
   const headerData = store.orderData['header'];
   const headerDateString = headerData['B']
-    ? new Date(headerData['B']).toLocaleDateString('pl-PL', {
+    ? new Date(headerData['B']).toLocaleDateString(dateLocale.value, {
         day: '2-digit',
         month: '2-digit',
         year: 'numeric'

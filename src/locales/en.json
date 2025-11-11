@@ -1,7 +1,8 @@
 {
    "locale": {
       "pl": "POL",
-      "en": "ENG"
+      "en": "ENG",
+      "de": "GER"
    },
    "navbar": {
       "OrderMessagePanel": "MESSAGE",
@@ -168,7 +169,7 @@
          "signalbox1": "x.1 signalbox",
          "signalbox2": "x.2 signalbox",
          "km1": "x.3 km",
-         "message-html": "<b>Level crossing distant signals (TOP)</b> at post {0} referring to level crossing at km {1} <b>are to be ignored. Proceed with timetable speed.</b> | <b>Wskazania tarcz ostrzegawczych</b> na line {0} / {1} referring to level crossing at km {2} <b>are to be ignored. Proceed with timetable speed.</b> | <b>Wskazania tarcz ostrzegawczych</b> na line {0} / {1} referring to level crossing at km {2} <b>are to be ignored. Proceed with timetable speed.</b>"
+         "message-html": "<b>Level crossing distant signals (TOP)</b> at post {0} referring to level crossing at km {1} <b>are to be ignored. Proceed with timetable speed.</b> | <b>Level crossing distant signals (TOP)</b> on line {0} {'|'} {1} referring to level crossing at km {2} <b>are to be ignored. Proceed with timetable speed.</b> | <b>Level crossing distant signals (TOP)</b> on line {0} {'|'} {1} referring to level crossing at km {2} <b>are to be ignored. Proceed with timetable speed.</b>"
       },
       "2155": {
          "text": "{bold1} at post/line {signalbox1}{'|'}{signalbox2} referring to signal {signal1}.",
@@ -176,7 +177,7 @@
          "signalbox1": "x.1 signalbox",
          "signalbox2": "x.2 signalbox",
          "signal1": "x.3 signal",
-         "message-html": "<b>Damaged SHP device</b> at post {0} referring to signal {2}|<b>Damaged SHP device</b> on line {0} {'|'} {1} referring to signal {2}|<b>Uszkodzone urządzenia SHP</b> on line {0} {'|'} {1} referring to signal {2}"
+         "message-html": "<b>Damaged SHP device</b> at post {0} referring to signal {2}|<b>Damaged SHP device</b> on line {0} {'|'} {1} referring to signal {2}|<b>Damaged SHP device</b> on line {0} {'|'} {1} referring to signal {2}"
       },
       "2160": {
          "text": "{bold1} from {signalbox1} to {signalbox2}, rerouted via {signalbox3} by line {line1} with the speed of {vmax1}.",
@@ -205,14 +206,14 @@
          "message-html": "<b>At section between</b> {0} and {1} of the line no. {2} <b>ride with the analog contact.</b>"
       },
       "2180": {
-         "text": "{bold1} no. {track1} in the directon of {signalbox1} to km {km1} turning to {signalbox2} until hour {hour1}",
+         "text": "{bold1} no. {track1} in the direction of {signalbox1} to km {km1} turning to {signalbox2} until hour {hour1}",
          "bold1": "Run on the closed track",
-         "track1": "x.1 tor",
+         "track1": "x.1 track",
          "signalbox1": "x.2 signalbox",
          "km1": "x.3 km",
          "signalbox2": "x.4 signalbox",
          "hour1": "x.5 hour",
-         "message-html": "<b>Run on the closed track</b> no. {0} in the directon of {1} to km {2} turning to {3} until hour {4}"
+         "message-html": "<b>Run on the closed track</b> no. {0} in the direction of {1} to km {2} turning to {3} until hour {4}"
       },
       "2181": {
          "text": "{bold1}",
@@ -254,13 +255,13 @@
          "km1": "x.{0} km",
          "km2": "x.{0} km",
          "other1": "x.{1} cause",
-         "message-html": "<b>Nie przekraczać prędkości i zachować ostrożność:</b>",
-         "message-html-list": "<b>{0}. On post</b> {1} track no. {3} v{4}km/h from {5}km to {6}km - cause: {7}|<b>{0}. On post</b> {1} tor nr {3} v{4} from {5}km to {6}km - cause: {7}|<b>{0}. On line</b> {1}/{2} tor nr {3} v{4} from {5}km to {6}km - cause: {7}"
+         "message-html": "<b>Do not exceed the speed and stay alert:</b>",
+         "message-html-list": "<b>{0}. At post</b> {1} track no. {3} v{4} km/h from km {5} to km {6} - cause: {7}|<b>{0}. At post</b> {1} track no. {3} v{4} from km {5} to km {6} - cause: {7}|<b>{0}. On line</b> {1}/{2} track no. {3} v{4} from km {5} to km {6} - cause: {7}"
       },
       "2311": {
          "text": "{bold1}",
-         "bold1": "Use „Baczność” signal multiple times",
-         "message-html": "<b>Use „Baczność” signal multiple times</b>"
+         "bold1": "Use “RP1” signal multiple times",
+         "message-html": "<b>Use “RP1” signal multiple times</b>"
       },
       "2320": {
          "text": "{other2320}",

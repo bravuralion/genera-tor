@@ -81,20 +81,24 @@ async function checkAppVersion() {
 }
 
 function loadLang() {
+  const supportedLocales = ['pl', 'en', 'de'];
   const storageLang = StorageManager.getStringValue('lang');
 
-  if (storageLang) {
+  if (storageLang && supportedLocales.includes(storageLang)) {
     store.changeLang(storageLang);
     return;
   }
 
-  if (!window.navigator.language) return;
+  const naviLanguage = window.navigator.language?.toString().toLowerCase() ?? '';
 
-  const naviLanguage = window.navigator.language.toString();
+  if (naviLanguage.startsWith('pl')) return;
 
-  if (!naviLanguage.startsWith('pl')) {
-    store.changeLang('en');
+  if (naviLanguage.startsWith('de')) {
+    store.changeLang('de');
+    return;
   }
+
+  store.changeLang('en');
 }
 </script>
 

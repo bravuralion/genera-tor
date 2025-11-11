@@ -342,6 +342,11 @@ export const useStore = defineStore('store', {
   },
   actions: {
     changeLang(lang: string) {
+      const supportedLocales = ['pl', 'en', 'de'] as const;
+      if (!supportedLocales.includes(lang as (typeof supportedLocales)[number])) {
+        lang = 'pl';
+      }
+
       i18n.global.locale.value = lang as typeof i18n.global.locale.value;
       this.currentAppLocale = lang;
 

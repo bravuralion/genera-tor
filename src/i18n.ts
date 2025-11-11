@@ -1,3 +1,4 @@
+import deLang from './locales/de.json';
 import enLang from './locales/en.json';
 import plLang from './locales/pl.json';
 
@@ -10,6 +11,7 @@ const i18n = createI18n({
   fallbackLocale: 'pl',
 
   messages: {
+    de: deLang,
     en: enLang,
     pl: plLang
   },
