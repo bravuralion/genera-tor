@@ -5,278 +5,278 @@
       "de": "DEU"
    },
    "navbar": {
-      "OrderMessagePanel": "MESSAGE",
-      "OrderListPanel": "SAVED",
-      "OrderTrainPickerPanel": "TRAINS"
+      "OrderMessagePanel": "MELDUNG",
+      "OrderListPanel": "GESPEICHERT",
+      "OrderTrainPickerPanel": "ZÜGE"
    },
    "update": {
-      "update-available-text": "New GeneraTOR version is available!",
-      "update-available-underline": "Click here to update!",
-      "title": "GeneraTOR update!",
-      "confirm": "ROGER THAT!",
-      "no-data": "No changelog available!",
-      "info-1": "This changelog will be available to see once again after clicking the version number in the footer",
-      "info-2": "The full app changelog available on <a href='https://github.com/Spythere/genera-tor' target='_blank'>the project's GitHub</a>"
+      "update-available-text": "Neue GeneraTOR-Version verfügbar!",
+      "update-available-underline": "Hier klicken, um zu aktualisieren!",
+      "title": "GeneraTOR-Update!",
+      "confirm": "ALLES KLAR!",
+      "no-data": "Kein Changelog verfügbar!",
+      "info-1": "Dieses Changelog kann nach einem Klick auf die Versionsnummer im Footer erneut angezeigt werden",
+      "info-2": "Das vollständige App-Changelog ist auf <a href='https://github.com/Spythere/genera-tor' target='_blank'>dem GitHub-Projekt</a> verfügbar"
    },
    "order-message": {
-      "title": "Message to display in the simulator's chatbox:",
-      "info": "Copy or save the content of the generated train order using buttons below:",
-      "button-save": "Save as new order",
-      "button-copy": "Copy order message",
-      "button-update": "Update order",
-      "button-reset": "Reset order",
-      "warning-outdated-clipboard": "Oops! Your browser may be a little bit depraceted since it's not supporting saving data to the clipboard! :/",
-      "warning-fill-inputs": "Fill all the empty fields before copying the order!",
-      "warning-add-instruction": "Add at least one order instruction before copying the order!",
-      "warning-fill-missing": "Fill rows in the order's header and footer before copying it!",
-      "warning-fill-top-save": "Fill at least fields A, B, C and D in the order's header before saving it!",
-      "warning-fill-top-update": "Fill at least fields A, B, C and D in the order's header before updating it!",
-      "warning-order-identical": "Last saved order is identical as the current one!",
-      "warning-no-order-selected": "Choose the already saved order first!",
-      "warning-conflicting-instructions": "Instruction {0} and {1} can't be on the same order!",
-      "error-update": "An error occurred while saving this order! :/",
-      "success-update-html": "Updated this <b class=\"text--accent\">order's</b> message!",
-      "success-save-html": "Saved <b class=\"text--accent\">order's</b> message in the browser memory!",
-      "success-copy-html": "<b class=\"text--accent\">Success!</b> You may paste the order message in the simulator's chatbox now!"
+      "title": "Nachricht, die im Chat des Simulators angezeigt wird:",
+      "info": "Kopiere oder speichere den Inhalt des generierten Fahrbefehls über die Buttons unten:",
+      "button-save": "Als neuen Befehl speichern",
+      "button-copy": "Fahrbefehl kopieren",
+      "button-update": "Befehl aktualisieren",
+      "button-reset": "Befehl zurücksetzen",
+      "warning-outdated-clipboard": "Ups! Dein Browser ist wohl etwas veraltet, da er das Speichern in die Zwischenablage nicht unterstützt! :/",
+      "warning-fill-inputs": "Fülle alle leeren Felder aus, bevor du den Befehl kopierst!",
+      "warning-add-instruction": "Füge mindestens eine Befehlsanweisung hinzu, bevor du den Befehl kopierst!",
+      "warning-fill-missing": "Fülle die Zeilen im Kopf- und Fußbereich des Befehls aus, bevor du ihn kopierst!",
+      "warning-fill-top-save": "Fülle mindestens die Felder A, B, C und D im Kopf des Befehls aus, bevor du ihn speicherst!",
+      "warning-fill-top-update": "Fülle mindestens die Felder A, B, C und D im Kopf des Befehls aus, bevor du ihn aktualisierst!",
+      "warning-order-identical": "Der zuletzt gespeicherte Befehl ist identisch mit dem aktuellen!",
+      "warning-no-order-selected": "Wähle zuerst einen bereits gespeicherten Befehl aus!",
+      "warning-conflicting-instructions": "Die Anweisungen {0} und {1} dürfen nicht im selben Befehl stehen!",
+      "error-update": "Beim Speichern dieses Befehls ist ein Fehler aufgetreten! :/",
+      "success-update-html": "Nachricht dieses <b class=\"text--accent\">Befehls</b> aktualisiert!",
+      "success-save-html": "Nachricht dieses <b class=\"text--accent\">Befehls</b> im Browser-Speicher gesichert!",
+      "success-copy-html": "<b class=\"text--accent\">Erfolg!</b> Du kannst den Befehl jetzt im Chat des Simulators einfügen!"
    },
    "order-footer": {
-      "field-stationName": "station",
-      "field-checkpointName": "checkpoint",
-      "field-hour": "hour",
+      "field-stationName": "bahnhof",
+      "field-checkpointName": "kontrollpunkt",
+      "field-hour": "stunde",
       "field-minutes": "minute",
-      "field-dispatcherName": "dispatcher",
-      "field-secondaryDispatcherName": "ordering dispatcher",
-      "field-dispatcherOrSecondaryName": "dispatcher (or ordering dispatcher)"
+      "field-dispatcherName": "fahrdienstleiter",
+      "field-secondaryDispatcherName": "anordnender fahrdienstleiter",
+      "field-dispatcherOrSecondaryName": "fahrdienstleiter (oder anordnender fahrdienstleiter)"
    },
    "order-options": {
-      "dark-mode": "Order dark theme",
-      "update-number-on-copy": "Update order number on copy",
-      "update-number-on-save": "Update order number on save",
-      "update-hours": "Update order hour on edit"
+      "dark-mode": "Dunkles Design für Fahrbefehl",
+      "update-number-on-copy": "Befehlsnummer beim Kopieren aktualisieren",
+      "update-number-on-save": "Befehlsnummer beim Speichern aktualisieren",
+      "update-hours": "Befehlszeit beim Bearbeiten aktualisieren"
    },
    "order-list": {
-      "title": "Saved train orders",
-      "order-title": "Train order for no. {trainNo}",
-      "order-subtitle": "Selected instructions: {0}",
-      "no-saved-orders": "No saved orders!",
-      "order-added": "Added:",
-      "order-updated": "Updated:",
-      "button-order-select": "Select",
-      "button-order-remove": "Remove",
-      "warning-deprecated-version": "Deprecated version of the order - may generate incorrect information!",
-      "warning-removed-deprecated-orders": "Removed deprecated train orders ({count}) due to their replacement with a new format in Polish railway!"
+      "title": "Gespeicherte Fahrbefehle",
+      "order-title": "Fahrbefehl für Nr. {trainNo}",
+      "order-subtitle": "Ausgewählte Anweisungen: {0}",
+      "no-saved-orders": "Keine Befehle gespeichert!",
+      "order-added": "Hinzugefügt:",
+      "order-updated": "Aktualisiert:",
+      "button-order-select": "Auswählen",
+      "button-order-remove": "Entfernen",
+      "warning-deprecated-version": "Veraltete Version des Befehls – möglicherweise mit falschen Angaben!",
+      "warning-removed-deprecated-orders": "Veraltete Fahrbefehle entfernt ({count}), da sie durch ein neues Format im polnischen Bahnverkehr ersetzt wurden!"
    },
    "order-train-picker": {
-      "placeholder-scenery-name": "Scenery name",
+      "placeholder-scenery-name": "Name der Anlage",
       "placeholder-region-name": "Region",
-      "placeholder-checkpoint-name": "Checkpoint name",
-      "autofill-checkpoint-id": "Autofill checkpoint's abbreviation",
-      "info": "Select scenery name to display active trains",
-      "title": "Active timetables and trains on the scenery",
-      "subtitle": "Click on the user below to fill the current order with their information",
-      "no-trains": "No trains to display"
+      "placeholder-checkpoint-name": "Name des Kontrollpunkts",
+      "autofill-checkpoint-id": "Abkürzung des Kontrollpunkts automatisch ausfüllen",
+      "info": "Wähle einen Anlagen-Namen, um aktive Züge anzuzeigen",
+      "title": "Aktive Fahrpläne und Züge auf der Anlage",
+      "subtitle": "Klicke auf den Nutzer unten, um den aktuellen Befehl mit seinen Daten zu füllen",
+      "no-trains": "Keine Züge verfügbar"
    },
    "order": {
-      "title": "Polish Railway Train Order",
+      "title": "Fahrbefehl der Polnischen Bahn",
       "header": {
-         "A": "A Train No {'|'} Shunting composition No",
-         "A-placeholder": "Train / shunting composition number",
-         "B": "B Date",
-         "C": "C Location of train {'|'} Location of shunting composition",
-         "C-placeholder": "Name of the post / line / scenery",
-         "D": "D Location of issuer",
-         "D-placeholder": "Name of the post / scenery"
+         "A": "A Zug-Nr. {'|'} Rangiergruppennr.",
+         "A-placeholder": "Nummer des Zuges / der Rangiergruppe",
+         "B": "B Datum",
+         "C": "C Aufenthaltsort des Zuges {'|'} Aufenthaltsort der Rangiergruppe",
+         "C-placeholder": "Name des Postens / der Strecke / der Anlage",
+         "D": "D Ausgabestelle",
+         "D-placeholder": "Name des Postens / der Anlage"
       },
       "22": {
-         "text": "Applies to left-track traffic",
-         "message-html": "<b>Applies to left-track traffic</b>"
+         "text": "Gilt für Linksverkehr",
+         "message-html": "<b>Gilt für Linksverkehr</b>"
       },
       "99": {
-         "text": "Revoke the train order",
-         "x1": "x.1 Train order identifier",
-         "message-html": "<b>Revoke the train order</b> {0}"
+         "text": "Fahrbefehl widerrufen",
+         "x1": "x.1 Kennung des Fahrbefehls",
+         "message-html": "<b>Fahrbefehl widerrufen</b> {0}"
       },
       "2110": {
-         "text": "{bold1} from track no. {track1} from {signalbox1} {br} to track no. {track2} in the direction of {signalbox2} {br} Pass Stop signals {signal1} and {signal2} and {signal3}",
-         "bold1": "Is allowed to exit",
-         "track1": "x.1 track",
-         "signalbox1": "x.2 signalbox",
-         "track2": "x.3 track",
-         "signalbox2": "x.4 signalbox",
+         "text": "{bold1} von Gleis Nr. {track1} aus {signalbox1} {br} nach Gleis Nr. {track2} in Richtung {signalbox2}{br} Vorbeifahrt an Halt zeigenden Signalen {signal1} und {signal2} sowie {signal3}",
+         "bold1": "Darf ausfahren",
+         "track1": "x.1 gleis",
+         "signalbox1": "x.2 stellwerk",
+         "track2": "x.3 gleis",
+         "signalbox2": "x.4 stellwerk",
          "signal1": "x.5 signal",
          "signal2": "x.6 signal",
          "signal3": "x.7 signal",
-         "message-html": "<b>Is allowed to exit</b> from track no. {0} from {1} to track no. {2} in the direction of {3}. Pass Stop signals {4} and {5} and {6}"
+         "message-html": "<b>Darf ausfahren</b> von Gleis Nr. {0} aus {1} nach Gleis Nr. {2} in Richtung {3}. Vorbeifahrt an Halt zeigenden Signalen {4} und {5} sowie {6}"
       },
       "2115": {
-         "text": "{bold1} from track no. {track1} to {signalbox1} on track no. {track2} {br} Pass signals {signal1} and {signal2} and {signal3}",
-         "bold1": "Is allowed to enter",
-         "track1": "x.1 track",
-         "signalbox1": "x.2 signalbox",
-         "track2": "x.3 track",
+         "text": "{bold1} von Gleis Nr. {track1} nach {signalbox1} auf Gleis Nr. {track2} {br} Vorbeifahrt an Signalen {signal1} und {signal2} sowie {signal3}",
+         "bold1": "Darf einfahren",
+         "track1": "x.1 gleis",
+         "signalbox1": "x.2 stellwerk",
+         "track2": "x.3 gleis",
          "signal1": "x.4 signal",
          "signal2": "x.5 signal",
          "signal3": "x.6 signal",
-         "message-html": "<b>Is allowed to enter</b> from track no. {0} to {1} on track no. {2}. Pass signals {3} and {4} and {5}"
+         "message-html": "<b>Darf einfahren</b> von Gleis Nr. {0} nach {1} auf Gleis Nr. {2}. Vorbeifahrt an Signalen {3} und {4} sowie {5}"
       },
       "2120": {
-         "text": "From {signalbox1} to {signalbox2} on track {track1} {br} {highlight1} {br} {underline1}{highlight2}.",
-         "highlight1": "SBL signalling indications are to be ignored.",
-         "underline1": "Stay alert after passing the signal with indicator",
+         "text": "Von {signalbox1} nach {signalbox2} auf Gleis {track1} {br} {highlight1} {br} {underline1}{highlight2}.",
+         "highlight1": "Signale der automatischen Blocksteuerung (SBL) sind zu ignorieren.",
+         "underline1": "Sei wachsam nach Passieren des Signals mit Kennzeichen",
          "highlight2": " W18",
-         "signalbox1": "x.1 signalbox",
-         "signalbox2": "x.2 signalbox",
-         "track1": "x.3 track no",
-         "message-html": "From {0} to {1} on track {2} <b>SBL signals are to be ignored.</b> Stay alert after passing the signal with indicator <b>W18.</b>"
+         "signalbox1": "x.1 stellwerk",
+         "signalbox2": "x.2 stellwerk",
+         "track1": "x.3 gleis",
+         "message-html": "Von {0} nach {1} auf Gleis {2} <b>SBL-Signale sind zu ignorieren.</b> Sei wachsam nach Passieren des Signals mit Kennzeichen <b>W18.</b>"
       },
       "2125": {
-         "text": "Is allowed to pass {select1} in the direction of {signalbox1} on track {track1} to km {km1} to hour {hour1}.",
-         "select1-a": "indicator W5",
-         "select1-b": "last switch",
-         "signalbox1": "x.1 signalbox",
-         "track1": "x.2 track",
+         "text": "Darf {select1} in Richtung {signalbox1} auf Gleis {track1} bis km {km1} bis Uhrzeit {hour1} passieren.",
+         "select1-a": "Tafel W5",
+         "select1-b": "letzte Weiche",
+         "signalbox1": "x.1 stellwerk",
+         "track1": "x.2 gleis",
          "km1": "x.3 km",
-         "hour1": "x.4 hour",
-         "message-html": "Is allowed to pass {0} in the direction of {1} on track {2} to km {3} to hour {4}."
+         "hour1": "x.4 stunde",
+         "message-html": "Darf {0} in Richtung {1} auf Gleis {2} bis km {3} bis Uhrzeit {4} passieren."
       },
       "2135": {
-         "text": "{bold1} on track no. {track1} in the direction of {signalbox1}.",
-         "bold1": "Is allowed to proceed",
-         "track1": "x.1 track",
-         "signalbox1": "x.2 signalbox",
-         "message-html": "<b>Is allowed to proceed</b> on track no. {0} in the direction of {1}"
+         "text": "{bold1} auf Gleis Nr. {track1} in Richtung {signalbox1}.",
+         "bold1": "Darf weiterfahren",
+         "track1": "x.1 gleis",
+         "signalbox1": "x.2 stellwerk",
+         "message-html": "<b>Darf weiterfahren</b> auf Gleis Nr. {0} in Richtung {1}"
       },
       "2140": {
-         "text": "{bold1} at post/line {signalbox1}{'|'}{signalbox2} at km {km1} for {other1}",
-         "bold1": "Train halt",
-         "signalbox1": "x.1 signalbox",
-         "signalbox2": "x.2 signalbox",
+         "text": "{bold1} an Posten/Strecke {signalbox1}{'|'}{signalbox2} bei km {km1} für {other1}",
+         "bold1": "Zughalt",
+         "signalbox1": "x.1 stellwerk",
+         "signalbox2": "x.2 stellwerk",
          "km1": "x.3 km",
-         "other1": "x.96 cause",
-         "message-html": "<b>Train halt</b> at post {0} at km {2} for {3} | <b>Train halt</b> on line {0} {'|'} {1} at km {2} for {3} | <b>Train halt</b> on line {0} {'|'} {1} at km {2} for {3}"
+         "other1": "x.96 grund",
+         "message-html": "<b>Zughalt</b> am Posten {0} bei km {2} wegen {3} | <b>Zughalt</b> auf der Strecke {0} {'|'} {1} bei km {2} wegen {3} | <b>Zughalt</b> auf der Strecke {0} {'|'} {1} bei km {2} wegen {3}"
       },
       "2145": {
-         "text": "At {signalbox1} the clear signal {signal1}{br}{bold1}",
-         "bold1": "is invalid. Stop the train before this signal.",
-         "signalbox1": "x.1 signalbox",
+         "text": "Bei {signalbox1} ist das Fahrt zeigende Signal {signal1}{br}{bold1}",
+         "bold1": "ungültig. Halte den Zug vor diesem Signal an.",
+         "signalbox1": "x.1 stellwerk",
          "signal1": "x.2 signal",
-         "message-html": "At {0} the clear signal {1} <b>is invalid, stop the train before this signal.</b>"
+         "message-html": "Bei {0} ist das Fahrt zeigende Signal {1} <b>ungültig, halte den Zug vor diesem Signal an.</b>"
       },
       "2150": {
-         "text": "{bold1} at post/line {br} {signalbox1} / {signalbox2} referring to level crossing at km {km1}{br}{bold2}",
-         "bold1": "Level crossing distant signals (TOP)",
-         "bold2": "are to be ignored. Proceed with timetable speed.",
-         "signalbox1": "x.1 signalbox",
-         "signalbox2": "x.2 signalbox",
+         "text": "{bold1} an Posten/Strecke {br} {signalbox1} / {signalbox2} betreffend Bahnübergang bei km {km1}{br}{bold2}",
+         "bold1": "Vorfahrsignale (TOP) am Bahnübergang",
+         "bold2": "sind zu ignorieren. Fahre mit Fahrplangeschwindigkeit.",
+         "signalbox1": "x.1 stellwerk",
+         "signalbox2": "x.2 stellwerk",
          "km1": "x.3 km",
-         "message-html": "<b>Level crossing distant signals (TOP)</b> at post {0} referring to level crossing at km {1} <b>are to be ignored. Proceed with timetable speed.</b> | <b>Level crossing distant signals (TOP)</b> on line {0} {'|'} {1} referring to level crossing at km {2} <b>are to be ignored. Proceed with timetable speed.</b> | <b>Level crossing distant signals (TOP)</b> on line {0} {'|'} {1} referring to level crossing at km {2} <b>are to be ignored. Proceed with timetable speed.</b>"
+         "message-html": "<b>Vorfahrsignale (TOP) am Bahnübergang</b> am Posten {0} für den Bahnübergang bei km {1} <b>sind zu ignorieren. Fahre mit Fahrplangeschwindigkeit.</b> | <b>Vorfahrsignale (TOP) am Bahnübergang</b> auf der Strecke {0} {'|'} {1} für den Bahnübergang bei km {2} <b>sind zu ignorieren. Fahre mit Fahrplangeschwindigkeit.</b> | <b>Vorfahrsignale (TOP) am Bahnübergang</b> auf der Strecke {0} {'|'} {1} für den Bahnübergang bei km {2} <b>sind zu ignorieren. Fahre mit Fahrplangeschwindigkeit.</b>"
       },
       "2155": {
-         "text": "{bold1} at post/line {signalbox1}{'|'}{signalbox2} referring to signal {signal1}.",
-         "bold1": "Damaged SHP device",
-         "signalbox1": "x.1 signalbox",
-         "signalbox2": "x.2 signalbox",
+         "text": "{bold1} an Posten/Strecke {signalbox1}{'|'}{signalbox2} betreffend Signal {signal1}.",
+         "bold1": "Defektes SHP-Gerät",
+         "signalbox1": "x.1 stellwerk",
+         "signalbox2": "x.2 stellwerk",
          "signal1": "x.3 signal",
-         "message-html": "<b>Damaged SHP device</b> at post {0} referring to signal {2}|<b>Damaged SHP device</b> on line {0} {'|'} {1} referring to signal {2}|<b>Damaged SHP device</b> on line {0} {'|'} {1} referring to signal {2}"
+         "message-html": "<b>Defektes SHP-Gerät</b> am Posten {0} betreffend Signal {2}|<b>Defektes SHP-Gerät</b> auf der Strecke {0} {'|'} {1} betreffend Signal {2}|<b>Defektes SHP-Gerät</b> auf der Strecke {0} {'|'} {1} betreffend Signal {2}"
       },
       "2160": {
-         "text": "{bold1} from {signalbox1} to {signalbox2}, rerouted via {signalbox3} by line {line1} with the speed of {vmax1}.",
-         "bold1": "Route change",
-         "signalbox1": "x.1 signalbox",
-         "signalbox2": "x.2 signalbox",
-         "signalbox3": "x.3 signalbox",
-         "line1": "x.4 line",
+         "text": "{bold1} von {signalbox1} nach {signalbox2}, umgeleitet über {signalbox3} über Strecke {line1} mit einer Geschwindigkeit von {vmax1}.",
+         "bold1": "Streckenänderung",
+         "signalbox1": "x.1 stellwerk",
+         "signalbox2": "x.2 stellwerk",
+         "signalbox3": "x.3 stellwerk",
+         "line1": "x.4 linie",
          "vmax1": "x.5 km/h",
-         "message-html": "<b>Route change</b> from {0} to {1}, rerouted via {2} by line {3} with the speed of {4}."
+         "message-html": "<b>Streckenänderung</b> von {0} nach {1}, umgeleitet über {2} über Strecke {3} mit einer Geschwindigkeit von {4}."
       },
       "2165": {
-         "text": "{bold1} from {km1} to {km2}.",
-         "bold1": "Run with lowered pantographs",
+         "text": "{bold1} von {km1} bis {km2}.",
+         "bold1": "Mit gesenkten Stromabnehmern fahren",
          "km1": "x.1 km",
          "km2": "x.2 km",
-         "message-html": "<b>Run with lowered pantographs</b> from {0} to {1}."
+         "message-html": "<b>Mit gesenkten Stromabnehmern fahren</b> von {0} bis {1}."
       },
       "2170": {
-         "text": "{bold1} {signalbox1} and {signalbox2} of the line no. {line1}{br}{bold2}",
-         "bold1": "At section between",
-         "bold2": "ride with the analog contact.",
-         "signalbox1": "x.1 signalbox",
-         "signalbox2": "x.2 signalbox",
-         "line1": "x.3 line",
-         "message-html": "<b>At section between</b> {0} and {1} of the line no. {2} <b>ride with the analog contact.</b>"
+         "text": "{bold1} {signalbox1} und {signalbox2} der Strecke Nr. {line1}{br}{bold2}",
+         "bold1": "Im Abschnitt zwischen",
+         "bold2": "mit analogem Kontakt fahren.",
+         "signalbox1": "x.1 stellwerk",
+         "signalbox2": "x.2 stellwerk",
+         "line1": "x.3 linie",
+         "message-html": "<b>Im Abschnitt zwischen</b> {0} und {1} der Strecke Nr. {2} <b>mit analogem Kontakt fahren.</b>"
       },
       "2180": {
-         "text": "{bold1} no. {track1} in the direction of {signalbox1} to km {km1} turning to {signalbox2} until hour {hour1}",
-         "bold1": "Run on the closed track",
-         "track1": "x.1 track",
-         "signalbox1": "x.2 signalbox",
+         "text": "{bold1} Nr. {track1} in Richtung {signalbox1} bis km {km1} Abzweig nach {signalbox2} bis Uhrzeit {hour1}",
+         "bold1": "Befahren des gesperrten Gleises",
+         "track1": "x.1 gleis",
+         "signalbox1": "x.2 stellwerk",
          "km1": "x.3 km",
-         "signalbox2": "x.4 signalbox",
-         "hour1": "x.5 hour",
-         "message-html": "<b>Run on the closed track</b> no. {0} in the direction of {1} to km {2} turning to {3} until hour {4}"
+         "signalbox2": "x.4 stellwerk",
+         "hour1": "x.5 stunde",
+         "message-html": "<b>Befahren des gesperrten Gleises</b> Nr. {0} in Richtung {1} bis km {2} mit Abzweig nach {3} bis Uhrzeit {4}"
       },
       "2181": {
          "text": "{bold1}",
-         "bold1": "Track is closed with no rolling stock",
-         "message-html": "<b>Track is closed with no rolling stock</b> "
+         "bold1": "Gleis ist ohne Fahrzeuge gesperrt",
+         "message-html": "<b>Gleis ist ohne Fahrzeuge gesperrt</b> "
       },
       "2182": {
-         "text": "Train {train1} {bold1} at km {km1}",
-         "bold1": "is working on track",
-         "train1": "x.1 train no.",
+         "text": "Zug {train1} {bold1} bei km {km1}",
+         "bold1": "arbeitet im Gleis",
+         "train1": "x.1 zugnr.",
          "km1": "x.2 km",
-         "message-html": "Train {0} <b>is working on track</b> at km {1}"
+         "message-html": "Zug {0} <b>arbeitet im Gleis</b> bei km {1}"
       },
       "2183": {
-         "text": "Train {train1} {bold1} to km {km1}",
-         "bold1": "will be dispatched",
-         "train1": "x.1 train no.",
+         "text": "Zug {train1} {bold1} bis km {km1}",
+         "bold1": "wird entsandt",
+         "train1": "x.1 zugnr.",
          "km1": "x.2 km",
-         "message-html": "Train {0} <b>will be dispatched</b> to km {1}"
+         "message-html": "Zug {0} <b>wird entsandt</b> bis km {1}"
       },
       "2185": {
-         "text": "{bold1} on track no. {track1} at km {km1} on line {signalbox1} {'|'} {signalbox2}",
-         "bold1": "Is allowed to insert a PSD vehicle",
-         "track1": "x.1 track",
+         "text": "{bold1} auf Gleis Nr. {track1} bei km {km1} auf Strecke {signalbox1} {'|'} {signalbox2}",
+         "bold1": "Darf ein PSD-Fahrzeug einsetzen",
+         "track1": "x.1 gleis",
          "km1": "x.2 km",
-         "signalbox1": "x.3 signalbox",
-         "signalbox2": "x.4 signalbox",
-         "message-html": "<b>Is allowed to insert a PSD vehicle</b> on track no. {0} at km {1} on line {2} {'|'} {3}"
+         "signalbox1": "x.3 stellwerk",
+         "signalbox2": "x.4 stellwerk",
+         "message-html": "<b>Darf ein PSD-Fahrzeug einsetzen</b> auf Gleis Nr. {0} bei km {1} auf Strecke {2} {'|'} {3}"
       },
       "2310": {
          "text": "{bold1}{br}{text-list}",
-         "bold1": "Do not exceed the speed and stay alert:",
-         "text-list": "{bold} {signalbox1}/{signalbox2} track no. {track1} {v} {vmax1} from {km1} to {km2}  {other1}",
-         "bold": "{0}. On post/line",
-         "signalbox1": "x.{0} signalbox",
-         "signalbox2": "x.{0} signalbox",
-         "track1": "x.{0} track",
+         "bold1": "Geschwindigkeit nicht überschreiten und erhöhte Aufmerksamkeit:",
+         "text-list": "{bold} {signalbox1}/{signalbox2} Gleis Nr. {track1} {v} {vmax1} von {km1} bis {km2}  {other1}",
+         "bold": "{0}. Am Posten/Strecke",
+         "signalbox1": "x.{0} stellwerk",
+         "signalbox2": "x.{0} stellwerk",
+         "track1": "x.{0} gleis",
          "vmax1": "x.{0} km/h",
          "km1": "x.{0} km",
          "km2": "x.{0} km",
-         "other1": "x.{1} cause",
-         "message-html": "<b>Do not exceed the speed and stay alert:</b>",
-         "message-html-list": "<b>{0}. At post</b> {1} track no. {3} v{4} km/h from km {5} to km {6} - cause: {7}|<b>{0}. At post</b> {1} track no. {3} v{4} from km {5} to km {6} - cause: {7}|<b>{0}. On line</b> {1}/{2} track no. {3} v{4} from km {5} to km {6} - cause: {7}"
+         "other1": "x.{1} grund",
+         "message-html": "<b>Geschwindigkeit nicht überschreiten und erhöhte Aufmerksamkeit:</b>",
+         "message-html-list": "<b>{0}. Am Posten</b> {1} Gleis Nr. {3} v{4} km/h von km {5} bis km {6} – Grund: {7}|<b>{0}. Am Posten</b> {1} Gleis Nr. {3} v{4} von km {5} bis km {6} – Grund: {7}|<b>{0}. Auf der Strecke</b> {1}/{2} Gleis Nr. {3} v{4} von km {5} bis km {6} – Grund: {7}"
       },
       "2311": {
          "text": "{bold1}",
-         "bold1": "Use “RP1” signal multiple times",
-         "message-html": "<b>Use “RP1” signal multiple times</b>"
+         "bold1": "Signal „RP1“ mehrfach geben",
+         "message-html": "<b>Signal „RP1“ mehrfach geben</b>"
       },
       "2320": {
          "text": "{other2320}",
-         "other2320": "x.96 other",
-         "message-html": "Other: {0}"
+         "other2320": "x.96 sonstiges",
+         "message-html": "Sonstiges: {0}"
       },
       "footer": {
-         "V": "V Driver identifier",
-         "V-placeholder": "Driver nickname",
-         "W": "W Issuer identifier",
-         "W-placeholder": "Dispatcher nickname",
-         "Y": "Y Hour",
-         "Y-placeholder": "HH:MM, e.g. 09:25",
-         "Z": "Z Train order identifier",
-         "Z-placeholder": "RD-(order no.)-(sc. hash)-(2 last year digits)"
+         "V": "V Kennung des Triebfahrzeugführers",
+         "V-placeholder": "Spitzname des Triebfahrzeugführers",
+         "W": "W Kennung des Ausstellers",
+         "W-placeholder": "Spitzname des Fahrdienstleiters",
+         "Y": "Y Uhrzeit",
+         "Y-placeholder": "HH:MM, z. B. 09:25",
+         "Z": "Z Kennung des Fahrbefehls",
+         "Z-placeholder": "RD-(Befehlsnr.)-(Streckenkürzel)-(letzte 2 Jahresziffern)"
       }
    }
 }
