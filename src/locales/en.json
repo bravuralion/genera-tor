@@ -1,12 +1,13 @@
 {
    "locale": {
       "pl": "POL",
-      "en": "ENG"
+      "en": "ENG",
+      "de": "DEU"
    },
    "navbar": {
-      "order-message": "ORDER MESSAGE",
-      "order-list": "SAVED ORDERS",
-      "order-train-picker": "TRAINS"
+      "OrderMessagePanel": "MESSAGE",
+      "OrderListPanel": "SAVED",
+      "OrderTrainPickerPanel": "TRAINS"
    },
    "update": {
       "update-available-text": "New GeneraTOR version is available!",
@@ -21,15 +22,18 @@
       "title": "Message to display in the simulator's chatbox:",
       "info": "Copy or save the content of the generated train order using buttons below:",
       "button-save": "Save as new order",
-      "button-copy": "Copy the order message",
-      "button-update": "Update the order",
+      "button-copy": "Copy order message",
+      "button-update": "Update order",
+      "button-reset": "Reset order",
       "warning-outdated-clipboard": "Oops! Your browser may be a little bit depraceted since it's not supporting saving data to the clipboard! :/",
       "warning-fill-inputs": "Fill all the empty fields before copying the order!",
-      "warning-add-rows": "Add at least one row before copying the order!",
-      "warning-fill-footer": "Fill the following rows in the order's footer before copying it:",
-      "warning-fill-top": "Fill the order number, train number and date before saving it!",
+      "warning-add-instruction": "Add at least one order instruction before copying the order!",
+      "warning-fill-missing": "Fill rows in the order's header and footer before copying it!",
+      "warning-fill-top-save": "Fill at least fields A, B, C and D in the order's header before saving it!",
+      "warning-fill-top-update": "Fill at least fields A, B, C and D in the order's header before updating it!",
       "warning-order-identical": "Last saved order is identical as the current one!",
       "warning-no-order-selected": "Choose the already saved order first!",
+      "warning-conflicting-instructions": "Instruction {0} and {1} can't be on the same order!",
       "error-update": "An error occurred while saving this order! :/",
       "success-update-html": "Updated this <b class=\"text--accent\">order's</b> message!",
       "success-save-html": "Saved <b class=\"text--accent\">order's</b> message in the browser memory!",
@@ -52,12 +56,15 @@
    },
    "order-list": {
       "title": "Saved train orders",
-      "order-title": "Order \"{orderName}\" no. {orderNo} for train no. {trainNo}",
+      "order-title": "Train order for no. {trainNo}",
+      "order-subtitle": "Selected instructions: {0}",
       "no-saved-orders": "No saved orders!",
       "order-added": "Added:",
       "order-updated": "Updated:",
       "button-order-select": "Select",
-      "button-order-remove": "Remove"
+      "button-order-remove": "Remove",
+      "warning-deprecated-version": "Deprecated version of the order - may generate incorrect information!",
+      "warning-removed-deprecated-orders": "Removed deprecated train orders ({count}) due to their replacement with a new format in Polish railway!"
    },
    "order-train-picker": {
       "placeholder-scenery-name": "Scenery name",
@@ -68,5 +75,208 @@
       "title": "Active timetables and trains on the scenery",
       "subtitle": "Click on the user below to fill the current order with their information",
       "no-trains": "No trains to display"
+   },
+   "order": {
+      "title": "Polish Railway Train Order",
+      "header": {
+         "A": "A Train No {'|'} Shunting composition No",
+         "A-placeholder": "Train / shunting composition number",
+         "B": "B Date",
+         "C": "C Location of train {'|'} Location of shunting composition",
+         "C-placeholder": "Name of the post / line / scenery",
+         "D": "D Location of issuer",
+         "D-placeholder": "Name of the post / scenery"
+      },
+      "22": {
+         "text": "Applies to left-track traffic",
+         "message-html": "<b>Applies to left-track traffic</b>"
+      },
+      "99": {
+         "text": "Revoke the train order",
+         "x1": "x.1 Train order identifier",
+         "message-html": "<b>Revoke the train order</b> {0}"
+      },
+      "2110": {
+         "text": "{bold1} from track no. {track1} from {signalbox1} {br} to track no. {track2} in the direction of {signalbox2} {br} Pass Stop signals {signal1} and {signal2} and {signal3}",
+         "bold1": "Is allowed to exit",
+         "track1": "x.1 track",
+         "signalbox1": "x.2 signalbox",
+         "track2": "x.3 track",
+         "signalbox2": "x.4 signalbox",
+         "signal1": "x.5 signal",
+         "signal2": "x.6 signal",
+         "signal3": "x.7 signal",
+         "message-html": "<b>Is allowed to exit</b> from track no. {0} from {1} to track no. {2} in the direction of {3}. Pass Stop signals {4} and {5} and {6}"
+      },
+      "2115": {
+         "text": "{bold1} from track no. {track1} to {signalbox1} on track no. {track2} {br} Pass signals {signal1} and {signal2} and {signal3}",
+         "bold1": "Is allowed to enter",
+         "track1": "x.1 track",
+         "signalbox1": "x.2 signalbox",
+         "track2": "x.3 track",
+         "signal1": "x.4 signal",
+         "signal2": "x.5 signal",
+         "signal3": "x.6 signal",
+         "message-html": "<b>Is allowed to enter</b> from track no. {0} to {1} on track no. {2}. Pass signals {3} and {4} and {5}"
+      },
+      "2120": {
+         "text": "From {signalbox1} to {signalbox2} on track {track1} {br} {highlight1} {br} {underline1}{highlight2}.",
+         "highlight1": "SBL signalling indications are to be ignored.",
+         "underline1": "Stay alert after passing the signal with indicator",
+         "highlight2": " W18",
+         "signalbox1": "x.1 signalbox",
+         "signalbox2": "x.2 signalbox",
+         "track1": "x.3 track no",
+         "message-html": "From {0} to {1} on track {2} <b>SBL signals are to be ignored.</b> Stay alert after passing the signal with indicator <b>W18.</b>"
+      },
+      "2125": {
+         "text": "Is allowed to pass {select1} in the direction of {signalbox1} on track {track1} to km {km1} to hour {hour1}.",
+         "select1-a": "indicator W5",
+         "select1-b": "last switch",
+         "signalbox1": "x.1 signalbox",
+         "track1": "x.2 track",
+         "km1": "x.3 km",
+         "hour1": "x.4 hour",
+         "message-html": "Is allowed to pass {0} in the direction of {1} on track {2} to km {3} to hour {4}."
+      },
+      "2135": {
+         "text": "{bold1} on track no. {track1} in the direction of {signalbox1}.",
+         "bold1": "Is allowed to proceed",
+         "track1": "x.1 track",
+         "signalbox1": "x.2 signalbox",
+         "message-html": "<b>Is allowed to proceed</b> on track no. {0} in the direction of {1}"
+      },
+      "2140": {
+         "text": "{bold1} at post/line {signalbox1}{'|'}{signalbox2} at km {km1} for {other1}",
+         "bold1": "Train halt",
+         "signalbox1": "x.1 signalbox",
+         "signalbox2": "x.2 signalbox",
+         "km1": "x.3 km",
+         "other1": "x.96 cause",
+         "message-html": "<b>Train halt</b> at post {0} at km {2} for {3} | <b>Train halt</b> on line {0} {'|'} {1} at km {2} for {3} | <b>Train halt</b> on line {0} {'|'} {1} at km {2} for {3}"
+      },
+      "2145": {
+         "text": "At {signalbox1} the clear signal {signal1}{br}{bold1}",
+         "bold1": "is invalid. Stop the train before this signal.",
+         "signalbox1": "x.1 signalbox",
+         "signal1": "x.2 signal",
+         "message-html": "At {0} the clear signal {1} <b>is invalid, stop the train before this signal.</b>"
+      },
+      "2150": {
+         "text": "{bold1} at post/line {br} {signalbox1} / {signalbox2} referring to level crossing at km {km1}{br}{bold2}",
+         "bold1": "Level crossing distant signals (TOP)",
+         "bold2": "are to be ignored. Proceed with timetable speed.",
+         "signalbox1": "x.1 signalbox",
+         "signalbox2": "x.2 signalbox",
+         "km1": "x.3 km",
+         "message-html": "<b>Level crossing distant signals (TOP)</b> at post {0} referring to level crossing at km {1} <b>are to be ignored. Proceed with timetable speed.</b> | <b>Level crossing distant signals (TOP)</b> on line {0} {'|'} {1} referring to level crossing at km {2} <b>are to be ignored. Proceed with timetable speed.</b> | <b>Level crossing distant signals (TOP)</b> on line {0} {'|'} {1} referring to level crossing at km {2} <b>are to be ignored. Proceed with timetable speed.</b>"
+      },
+      "2155": {
+         "text": "{bold1} at post/line {signalbox1}{'|'}{signalbox2} referring to signal {signal1}.",
+         "bold1": "Damaged SHP device",
+         "signalbox1": "x.1 signalbox",
+         "signalbox2": "x.2 signalbox",
+         "signal1": "x.3 signal",
+         "message-html": "<b>Damaged SHP device</b> at post {0} referring to signal {2}|<b>Damaged SHP device</b> on line {0} {'|'} {1} referring to signal {2}|<b>Damaged SHP device</b> on line {0} {'|'} {1} referring to signal {2}"
+      },
+      "2160": {
+         "text": "{bold1} from {signalbox1} to {signalbox2}, rerouted via {signalbox3} by line {line1} with the speed of {vmax1}.",
+         "bold1": "Route change",
+         "signalbox1": "x.1 signalbox",
+         "signalbox2": "x.2 signalbox",
+         "signalbox3": "x.3 signalbox",
+         "line1": "x.4 line",
+         "vmax1": "x.5 km/h",
+         "message-html": "<b>Route change</b> from {0} to {1}, rerouted via {2} by line {3} with the speed of {4}."
+      },
+      "2165": {
+         "text": "{bold1} from {km1} to {km2}.",
+         "bold1": "Run with lowered pantographs",
+         "km1": "x.1 km",
+         "km2": "x.2 km",
+         "message-html": "<b>Run with lowered pantographs</b> from {0} to {1}."
+      },
+      "2170": {
+         "text": "{bold1} {signalbox1} and {signalbox2} of the line no. {line1}{br}{bold2}",
+         "bold1": "At section between",
+         "bold2": "ride with the analog contact.",
+         "signalbox1": "x.1 signalbox",
+         "signalbox2": "x.2 signalbox",
+         "line1": "x.3 line",
+         "message-html": "<b>At section between</b> {0} and {1} of the line no. {2} <b>ride with the analog contact.</b>"
+      },
+      "2180": {
+         "text": "{bold1} no. {track1} in the direction of {signalbox1} to km {km1} turning to {signalbox2} until hour {hour1}",
+         "bold1": "Run on the closed track",
+         "track1": "x.1 track",
+         "signalbox1": "x.2 signalbox",
+         "km1": "x.3 km",
+         "signalbox2": "x.4 signalbox",
+         "hour1": "x.5 hour",
+         "message-html": "<b>Run on the closed track</b> no. {0} in the direction of {1} to km {2} turning to {3} until hour {4}"
+      },
+      "2181": {
+         "text": "{bold1}",
+         "bold1": "Track is closed with no rolling stock",
+         "message-html": "<b>Track is closed with no rolling stock</b> "
+      },
+      "2182": {
+         "text": "Train {train1} {bold1} at km {km1}",
+         "bold1": "is working on track",
+         "train1": "x.1 train no.",
+         "km1": "x.2 km",
+         "message-html": "Train {0} <b>is working on track</b> at km {1}"
+      },
+      "2183": {
+         "text": "Train {train1} {bold1} to km {km1}",
+         "bold1": "will be dispatched",
+         "train1": "x.1 train no.",
+         "km1": "x.2 km",
+         "message-html": "Train {0} <b>will be dispatched</b> to km {1}"
+      },
+      "2185": {
+         "text": "{bold1} on track no. {track1} at km {km1} on line {signalbox1} {'|'} {signalbox2}",
+         "bold1": "Is allowed to insert a PSD vehicle",
+         "track1": "x.1 track",
+         "km1": "x.2 km",
+         "signalbox1": "x.3 signalbox",
+         "signalbox2": "x.4 signalbox",
+         "message-html": "<b>Is allowed to insert a PSD vehicle</b> on track no. {0} at km {1} on line {2} {'|'} {3}"
+      },
+      "2310": {
+         "text": "{bold1}{br}{text-list}",
+         "bold1": "Do not exceed the speed and stay alert:",
+         "text-list": "{bold} {signalbox1}/{signalbox2} track no. {track1} {v} {vmax1} from {km1} to {km2}  {other1}",
+         "bold": "{0}. On post/line",
+         "signalbox1": "x.{0} signalbox",
+         "signalbox2": "x.{0} signalbox",
+         "track1": "x.{0} track",
+         "vmax1": "x.{0} km/h",
+         "km1": "x.{0} km",
+         "km2": "x.{0} km",
+         "other1": "x.{1} cause",
+         "message-html": "<b>Do not exceed the speed and stay alert:</b>",
+         "message-html-list": "<b>{0}. At post</b> {1} track no. {3} v{4} km/h from km {5} to km {6} - cause: {7}|<b>{0}. At post</b> {1} track no. {3} v{4} from km {5} to km {6} - cause: {7}|<b>{0}. On line</b> {1}/{2} track no. {3} v{4} from km {5} to km {6} - cause: {7}"
+      },
+      "2311": {
+         "text": "{bold1}",
+         "bold1": "Use “RP1” signal multiple times",
+         "message-html": "<b>Use “RP1” signal multiple times</b>"
+      },
+      "2320": {
+         "text": "{other2320}",
+         "other2320": "x.96 other",
+         "message-html": "Other: {0}"
+      },
+      "footer": {
+         "V": "V Driver identifier",
+         "V-placeholder": "Driver nickname",
+         "W": "W Issuer identifier",
+         "W-placeholder": "Dispatcher nickname",
+         "Y": "Y Hour",
+         "Y-placeholder": "HH:MM, e.g. 09:25",
+         "Z": "Z Train order identifier",
+         "Z-placeholder": "RD-(order no.)-(sc. hash)-(2 last year digits)"
+      }
    }
 }

@@ -1,34 +1,46 @@
 <template>
-  <!-- <OrderHelper v-if="store.helperModalOpen" /> -->
-
   <div class="home">
-    <div class="home_container">
-      <div class="order_container">
-        <SideBar />
-        <OrderVue />
+    <div class="home-container">
+      <div class="order-container">
+        <Order />
       </div>
 
-      <div class="message_container">
-        <div class="message_nav">
-          <button class="g-button icon" @click="switchLanguages">
-            <LanguagesIcon :size="18" />
-            <span style="margin-left: 0.25em">{{ $t('locale.' + store.currentAppLocale) }}</span>
+      <div class="panel-container">
+        <div class="panel-nav">
+          <button
+            key="OrderMessagePanel"
+            class="g-button"
+            :data-active="store.panelMode == 'OrderMessagePanel'"
+            @click="selectOrderMode('OrderMessagePanel')"
+          >
+            <MessageSquareTextIcon :size="20" />
+            {{ t(`navbar.OrderMessagePanel`) }}
           </button>
 
           <button
-            v-for="(action, i) in navActions"
-            :key="action.mode"
-            class="g-button option"
-            :data-active="store.orderMode == action.mode"
-            @click="selectOrderMode(action.mode)"
+            key="OrderListPanel"
+            class="g-button"
+            :data-active="store.panelMode == 'OrderListPanel'"
+            @click="selectOrderMode('OrderListPanel')"
           >
-            {{ $t(`navbar.${action.value}`) }}
+            <BookMarkedIcon :size="20" />
+            {{ t(`navbar.OrderListPanel`) }}
+          </button>
+
+          <button
+            key="OrderTrainPickerPanel"
+            class="g-button"
+            :data-active="store.panelMode == 'OrderTrainPickerPanel'"
+            @click="selectOrderMode('OrderTrainPickerPanel')"
+          >
+            <TrainFrontIcon :size="20" />
+            {{ t(`navbar.OrderTrainPickerPanel`) }}
           </button>
         </div>
 
         <transition name="order-anim" mode="out-in">
           <keep-alive>
-            <Component :is="orderModeComponent" />
+            <Component :is="panelComponent" />
           </keep-alive>
         </transition>
       </div>
@@ -36,74 +48,34 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import OrderVue from '../components/Order.vue';
-import SideBar from '../components/SideBar.vue';
-import OrderMessage from '../components/OrderMessage.vue';
-import OrderList from '../components/OrderList.vue';
+<script lang="ts" setup>
+import { computed } from 'vue';
 import { useStore } from '../store/store';
-import OrderHelper from '../components/OrderHelper.vue';
-import OrderTrainPicker from '../components/OrderTrainPicker.vue';
-import { LanguagesIcon } from 'lucide-vue-next';
-import StorageManager from '../managers/storageManager';
+import { useI18n } from 'vue-i18n';
 
-export default defineComponent({
-  components: { OrderVue, SideBar, OrderHelper, LanguagesIcon },
+import Order from '../components/Order/Order.vue';
+import OrderMessagePanel from '../components/Panels/OrderMessagePanel.vue';
+import OrderListPanel from '../components/Panels/OrderListPanel.vue';
+import OrderTrainPickerPanel from '../components/Panels/OrderTrainPickerPanel.vue';
+import { TPanelMode } from '../types/dataTypes';
+import { BookMarkedIcon, MessageSquareTextIcon, TrainFrontIcon } from 'lucide-vue-next';
 
-  data() {
-    return {
-      navActions: [
-        {
-          mode: 'OrderMessage',
-          value: 'order-message'
-        },
-        {
-          mode: 'OrderList',
-          value: 'order-list'
-        },
-        {
-          mode: 'OrderTrainPicker',
-          value: 'order-train-picker'
-        }
-      ]
-    };
-  },
+const { t } = useI18n();
+const store = useStore();
 
-  methods: {
-    selectOrderMode(mode: string) {
-      this.store.orderMode = mode;
-    },
+function selectOrderMode(mode: TPanelMode) {
+  store.panelMode = mode;
+}
 
-    switchLanguages() {
-      const lang = this.store.currentAppLocale == 'pl' ? 'en' : 'pl';
-
-      this.$i18n.locale = lang;
-      this.store.currentAppLocale = lang;
-
-      StorageManager.setStringValue('lang', lang);
-    }
-  },
-
-  setup() {
-    return {
-      store: useStore()
-    };
-  },
-
-  computed: {
-    orderModeComponent() {
-      switch (this.store.orderMode) {
-        case 'OrderMessage':
-          return OrderMessage;
-        case 'OrderList':
-          return OrderList;
-        case 'OrderTrainPicker':
-          return OrderTrainPicker;
-        default:
-          return OrderMessage;
-      }
-    }
+const panelComponent = computed(() => {
+  switch (store.panelMode) {
+    case 'OrderListPanel':
+      return OrderListPanel;
+    case 'OrderTrainPickerPanel':
+      return OrderTrainPickerPanel;
+    case 'OrderMessagePanel':
+    default:
+      return OrderMessagePanel;
   }
 });
 </script>
@@ -112,7 +84,6 @@ export default defineComponent({
 @use '../styles/colors';
 
 .home {
-  min-height: 100vh;
   overflow-x: auto;
 
   display: flex;
@@ -122,69 +93,84 @@ export default defineComponent({
   width: 100%;
 }
 
-.home_container {
-  display: flex;
-  flex-wrap: wrap;
+.home-container {
+  display: grid;
+  grid-template-columns: 800px 500px;
   justify-content: center;
   gap: 2em 1em;
-  padding: 0.5em;
-
+  padding: 1em;
   width: 100%;
 
-  @media screen and (max-width: 650px) {
+  & > div {
+    height: calc(100vh - 5em);
+    overflow: auto;
+  }
+
+  @media screen and (max-width: 1350px) {
+    grid-template-columns: auto;
     padding: 1em 0.5em;
   }
 }
 
-.order_container {
-  width: 100%;
-  max-width: 600px;
-
+.order-container {
   display: flex;
   align-items: start;
+  max-width: 800px;
 
   @media screen and (max-width: 650px) {
     flex-direction: column;
   }
 }
 
-.message_container {
+.panel-container {
   padding: 2px;
-
-  width: 100%;
-  max-width: 500px;
+  max-width: 800px;
 
   display: grid;
   grid-template-rows: auto auto 1fr;
-
-  height: 95vh;
-  overflow: auto;
 }
 
-.message_nav {
+.panel-nav {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 0.25em;
   flex-wrap: wrap;
 
   margin-bottom: 1.5em;
 }
 
-.message_nav > button {
+.panel-nav > button {
   position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  min-width: 8em;
+  padding: 0.25em 0.5em;
+
+  &:focus-visible {
+    outline: 1px solid white;
+  }
 
   &::before {
     position: absolute;
     content: '';
     bottom: -3px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
     width: 0;
     height: 3px;
 
     transition: all 0.25s;
 
     background-color: colors.$accentCol;
+  }
+
+  &[data-active='true'] {
+    color: colors.$accentCol;
   }
 
   &[data-active='true']::before {

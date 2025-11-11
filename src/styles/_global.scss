@@ -1,22 +1,6 @@
 @use 'fonts';
 @use 'colors';
-
-// Global scrollbar style
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-::-webkit-scrollbar-track {
-  background: #333;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
+@use 'sass:color';
 
 body,
 html {
@@ -76,7 +60,7 @@ button.g-button {
     }
 
     &:hover:not([data-disabled='true']) {
-      background-color: colors.$bgColLighter;
+      background-color: color.adjust(colors.$bgColDarker, $lightness: 15%);
     }
   }
 
@@ -112,6 +96,10 @@ button.g-button {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:focus-visible {
+      outline: 1px solid white;
+    }
   }
 }
 
@@ -123,6 +111,10 @@ button.g-button {
 
   &--warn {
     color: colors.$warnCol;
+  }
+
+  &--grayed {
+    color: #ccc;
   }
 }
 
