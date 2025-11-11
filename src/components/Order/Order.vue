@@ -16,7 +16,14 @@ import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 const store = useStore();
-const dateLocale = computed(() => (store.currentAppLocale === 'pl' ? 'pl-PL' : 'en-GB'));
+
+const localeMap = {
+  pl: 'pl-PL',
+  en: 'en-GB',
+  de: 'de-DE'
+} as const;
+
+const dateLocale = computed(() => localeMap[store.currentAppLocale as keyof typeof localeMap] ?? 'en-GB');
 
 onMounted(() => {
   generateMessage();

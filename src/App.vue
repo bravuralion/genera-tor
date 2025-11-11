@@ -92,7 +92,9 @@ function loadLang() {
 
   const naviLanguage = window.navigator.language.toString();
 
-  if (!naviLanguage.startsWith('pl')) {
+  if (naviLanguage.startsWith('de')) {
+    store.changeLang('de');
+  } else if (!naviLanguage.startsWith('pl')) {
     store.changeLang('en');
   }
 }
