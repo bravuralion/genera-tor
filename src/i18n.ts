@@ -1,5 +1,6 @@
 import enLang from './locales/en.json';
 import plLang from './locales/pl.json';
+import deLang from './locales/de.json';
 
 import { createI18n } from 'vue-i18n';
 
@@ -11,7 +12,8 @@ const i18n = createI18n({
 
   messages: {
     en: enLang,
-    pl: plLang
+    pl: plLang,
+    de: deLang
   },
   enableLegacy: false
 });

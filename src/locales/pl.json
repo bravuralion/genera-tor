@@ -1,7 +1,8 @@
 {
    "locale": {
       "pl": "POL",
-      "en": "ENG"
+      "en": "ENG",
+      "de": "DEU"
    },
    "update": {
       "update-available-text": "Nowa wersja GeneraTORa dostępna!",
